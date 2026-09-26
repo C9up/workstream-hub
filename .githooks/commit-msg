@@ -1,0 +1,9 @@
+#!/bin/sh
+# Strips AI agent signatures (Claude / Anthropic co-author, "Generated with Claude Code") from the commit
+# message, whichever agent commits. Enable with: git config core.hooksPath .githooks
+msg="$1"
+tmp="$msg.tmp"
+grep -viE '^[[:space:]]*co-authored-by:.*(claude|anthropic)|generated with \[?claude code' "$msg" > "$tmp"
+# Drop trailing blank lines left behind.
+awk '{ lines[NR] = $0 } END { n = NR; while (n > 0 && lines[n] ~ /^[[:space:]]*$/) n--; for (i = 1; i <= n; i++) print lines[i] }' "$tmp" > "$msg"
+rm -f "$tmp"

@@ -48,6 +48,7 @@ Both in a skill's `SKILL.md` and in a memory document's frontmatter:
 
 - One item per file (or per folder for a skill), named in lowercase, without accents, with hyphens.
 - No secrets and no machine-specific paths.
+- No AI agent signatures in commits: enable the hook once with `git config core.hooksPath .githooks`.
 - `index.json` is regenerated and signed (`index.json.sig`, ed25519) on every change; a signature proves
   origin and integrity, not harmlessness: content stays inspectable before it is added.
 
