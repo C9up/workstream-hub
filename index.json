@@ -2,5 +2,46 @@
   "format": 1,
   "name": "workstream",
   "description": "Workstream repository: skills, context, processes and knowledge.",
-  "entries": []
+  "entries": [
+    {
+      "kind": "context",
+      "name": "preferences",
+      "path": "context/preferences.md",
+      "description": "Starting point for how agents should work in a Workstream project: language, updates, work tracking, checks, permissions, restarts",
+      "tags": [
+        "mr-mak"
+      ],
+      "sha256": "5e8ca17c1415514a559701c919479fdfe872541c3fd6d4b431462439273c408a"
+    },
+    {
+      "kind": "process",
+      "name": "creative-production",
+      "path": "processes/creative-production.md",
+      "description": "Brief and references, the right model, job receipts, review at full size, smallest useful revision",
+      "tags": [
+        "mr-mak"
+      ],
+      "sha256": "16e420583d313947c573ac9d53dd1531537fb36afc6abc2f711efe09dcc9446c"
+    },
+    {
+      "kind": "process",
+      "name": "workspace-authoring",
+      "path": "processes/workspace-authoring.md",
+      "description": "Reuse or create a Workspace card, write the report with the shared styling, then test it at wide and narrow widths",
+      "tags": [
+        "mr-mak"
+      ],
+      "sha256": "e3ec0d1558e039ffc1bbb0949ad9e9eda6afcf28b5a31d18cad0138192cb3c97"
+    },
+    {
+      "kind": "knowledge",
+      "name": "video-watch",
+      "path": "knowledge/video-watch.md",
+      "description": "Use the local extractor for a timestamped visual overview of a video clip",
+      "tags": [
+        "mr-mak"
+      ],
+      "sha256": "097c3d3bce0c42127052dcdf2c2bb5722e3a792671c5c9b8ab3f47c9fe5fced9"
+    }
+  ]
 }
