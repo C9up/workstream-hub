@@ -48,8 +48,18 @@ Both in a skill's `SKILL.md` and in a memory document's frontmatter:
 
 - One item per file (or per folder for a skill), named in lowercase, without accents, with hyphens.
 - No secrets and no machine-specific paths.
-- `index.json` is regenerated on every change. It will be signed (Workstream epic 14); a signature
-  proves origin and integrity, not harmlessness: content stays inspectable before it is added.
+- `index.json` is regenerated and signed (`index.json.sig`, ed25519) on every change; a signature proves
+  origin and integrity, not harmlessness: content stays inspectable before it is added.
+
+## Signature
+
+Public key (base64):
+
+```
+pkNP/0Elq5Are1ZV1IxWqg0IP+pJVwKj+3nH5b9FHGU=
+```
+
+Check a clone with `workstream repo verify --pubkey pkNP/0Elq5Are1ZV1IxWqg0IP+pJVwKj+3nH5b9FHGU= .`
 
 ## Origin
 
