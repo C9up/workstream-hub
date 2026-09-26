@@ -35,6 +35,15 @@ created: 2026-09-26
 
 The `type` values are Workstream's document types and stay as they are, whatever the language of the text.
 
+## Optional fields
+
+Both in a skill's `SKILL.md` and in a memory document's frontmatter:
+
+| Field | Meaning |
+|---|---|
+| `requires: [other-item]` | items of this repository added along with this one |
+| `agents: [claude, codex]` | agents the item works with (`claude`, `codex`, `opencode`, `gemini`); omitted: all |
+
 ## Rules
 
 - One item per file (or per folder for a skill), named in lowercase, without accents, with hyphens.
