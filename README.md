@@ -1,50 +1,50 @@
-# Dépôt Workstream
+# Workstream repository
 
-Skills, contexte, processus et connaissances à partager entre projets. Workstream les ajoute à sa
-bibliothèque locale (`~/.local/share/workstream/library/`), puis chaque projet en copie ce qu'il utilise
-(provenance et empreinte notées dans `.workstream/skills.toml` et `.workstream/memory.toml`).
+Skills, context, processes and knowledge shared across projects. Workstream adds them to its local
+library (`~/.local/share/workstream/library/`); each project then copies what it uses (origin and
+fingerprint recorded in `.workstream/skills.toml` and `.workstream/memory.toml`).
 
-## Organisation
+## Layout
 
-| Dossier | Contenu | Format |
+| Folder | Content | Format |
 |---|---|---|
-| `skills/<nom>/` | skills d'agents (Claude Code, Codex, OpenCode, Gemini) | `SKILL.md` (frontmatter `name`, `description`), plus scripts et références éventuels |
-| `context/` | contexte : qui, objectifs, façon de travailler | `<nom>.md`, `type: Contexte` |
-| `processes/` | procédures répétables, en étapes numérotées | `<nom>.md`, `type: Processus` |
-| `knowledge/` | leçons, préférences, erreurs à ne pas refaire | `<nom>.md`, `type: Leçon` / `Préférence` / `À ne pas refaire` |
-| `index.json` | catalogue du dépôt : une entrée par élément, avec son empreinte | généré, ne pas modifier à la main |
+| `skills/<name>/` | agent skills (Claude Code, Codex, OpenCode, Gemini) | `SKILL.md` (frontmatter `name`, `description`), plus optional scripts and references |
+| `context/` | context: who the owner is, goals, way of working | `<name>.md`, `type: Contexte` |
+| `processes/` | repeatable procedures, as numbered steps | `<name>.md`, `type: Processus` |
+| `knowledge/` | lessons, preferences, mistakes not to repeat | `<name>.md`, `type: Leçon` / `Préférence` / `À ne pas refaire` |
+| `index.json` | repository catalogue: one entry per item, with its fingerprint | generated, do not edit by hand |
 
-## Documents de mémoire
+## Memory documents
 
-Markdown à frontmatter (compatible OKF) :
+Markdown with a frontmatter (OKF-compatible):
 
 ```markdown
 ---
 type: Processus
-title: "Publier une release"
-description: "Taguer, laisser la CI construire, relire les notes, publier."
+title: "Publish a release"
+description: "Tag, let CI build, review the notes, publish."
 tags: [release, ci]
 status: draft
 created: 2026-09-26
 ---
 
-# Publier une release
+# Publish a release
 
 1. …
 ```
 
-## Règles
+The `type` values are Workstream's document types and stay as they are, whatever the language of the text.
 
-- Un élément par fichier (ou par dossier pour une skill), nommé en minuscules, sans accents, avec des tirets.
-- Pas de secret ni de chemin propre à une machine.
-- `index.json` est régénéré à chaque changement ; il sera signé (epic 14 de Workstream), la signature
-  prouvant la provenance et l'intégrité, pas l'innocuité : le contenu reste inspectable avant ajout.
+## Rules
 
-## Provenance
+- One item per file (or per folder for a skill), named in lowercase, without accents, with hyphens.
+- No secrets and no machine-specific paths.
+- `index.json` is regenerated on every change. It will be signed (Workstream epic 14); a signature
+  proves origin and integrity, not harmlessness: content stays inspectable before it is added.
 
-Les documents étiquetés `mr-mak` (contexte, processus, connaissances) viennent de
-[Mr. Mak Workspace](https://github.com/witnesstodark/mr-mak-workspace) (commit `de0f88b`), repris tels quels avec un frontmatter
-Workstream en plus. Licence d'origine :
+## Origin
 
-MIT License — Copyright (c) 2026 Mr. Mak Workspace contributors ; texte complet dans
-[`LICENSE-mr-mak`](LICENSE-mr-mak).
+Documents tagged `mr-mak` (context, processes, knowledge) come from
+[Mr. Mak Workspace](https://github.com/witnesstodark/mr-mak-workspace) (commit `de0f88b`), kept as they are
+with a Workstream frontmatter added. MIT License — Copyright (c) 2026 Mr. Mak Workspace contributors; full
+text in [`LICENSE-mr-mak`](LICENSE-mr-mak).
