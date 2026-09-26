@@ -4,6 +4,23 @@
   "description": "Workstream repository: skills, context, processes and knowledge.",
   "entries": [
     {
+      "kind": "skill",
+      "name": "no-ai-signatures",
+      "path": "skills/no-ai-signatures",
+      "description": "Keep commits free of AI agent signatures (Co-Authored-By Claude/Anthropic, \"Generated with Claude Code\"). Use when committing, opening a pull request, or setting up a repository whose owner does not want agent attribution.",
+      "scripts": [
+        "scripts/commit-msg",
+        "scripts/install.sh"
+      ],
+      "agents": [
+        "claude",
+        "codex",
+        "opencode",
+        "gemini"
+      ],
+      "sha256": "058628b8aa7bce963d48e43060ed532bdd46a48d536b94c4e0ad8c4e4a71bbdf"
+    },
+    {
       "kind": "context",
       "name": "preferences",
       "path": "context/preferences.md",
