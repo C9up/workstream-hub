@@ -30,4 +30,7 @@ It copies the hook to `.githooks/commit-msg` (commit that file so the team share
 `git config` command once. If `core.hooksPath` already points elsewhere, or a different `commit-msg` hook
 exists, the script stops and asks for a manual merge.
 
+Linux, macOS and Windows: the hook only needs `sh`, `grep` and `awk`; Git for Windows runs hooks with its
+bundled `sh`, so run the installer from Git Bash. Scripts are stored with LF line endings (`.gitattributes`).
+
 The hook does not rewrite past commits.
