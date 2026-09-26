@@ -41,10 +41,3 @@ The `type` values are Workstream's document types and stay as they are, whatever
 - No secrets and no machine-specific paths.
 - `index.json` is regenerated on every change. It will be signed (Workstream epic 14); a signature
   proves origin and integrity, not harmlessness: content stays inspectable before it is added.
-
-## Origin
-
-Documents tagged `mr-mak` (context, processes, knowledge) come from
-[Mr. Mak Workspace](https://github.com/witnesstodark/mr-mak-workspace) (commit `de0f88b`), kept as they are
-with a Workstream frontmatter added. MIT License — Copyright (c) 2026 Mr. Mak Workspace contributors; full
-text in [`LICENSE-mr-mak`](LICENSE-mr-mak).
