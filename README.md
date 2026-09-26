@@ -39,3 +39,12 @@ created: 2026-09-26
 - Pas de secret ni de chemin propre à une machine.
 - `index.json` est régénéré à chaque changement ; il sera signé (epic 14 de Workstream), la signature
   prouvant la provenance et l'intégrité, pas l'innocuité : le contenu reste inspectable avant ajout.
+
+## Provenance
+
+Les documents étiquetés `mr-mak` (contexte, processus, connaissances) viennent de
+[Mr. Mak Workspace](https://github.com/witnesstodark/mr-mak-workspace) (commit `de0f88b`), repris tels quels avec un frontmatter
+Workstream en plus. Licence d'origine :
+
+MIT License — Copyright (c) 2026 Mr. Mak Workspace contributors ; texte complet dans
+[`LICENSE-mr-mak`](LICENSE-mr-mak).
