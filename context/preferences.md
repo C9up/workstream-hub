@@ -2,7 +2,7 @@
 type: Contexte
 title: "Working preferences"
 description: "Starting point for how agents should work in a Workstream project: language, updates, work tracking, checks, permissions, restarts"
-tags: [starter]
+tags: [mr-mak]
 status: draft
 created: 2026-09-26
 source: "Adapted from Mr. Mak Workspace (MIT), context/preferences.md @ de0f88b"

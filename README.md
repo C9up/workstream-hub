@@ -44,6 +44,6 @@ The `type` values are Workstream's document types and stay as they are, whatever
 
 ## Origin
 
-Documents tagged `mr-mak` (and `context/preferences.md`, adapted to Workstream) come from [Mr. Mak Workspace](https://github.com/witnesstodark/mr-mak-workspace)
-(commit `de0f88b`), kept as they are with a Workstream frontmatter added. MIT License — Copyright (c) 2026
+Documents tagged `mr-mak` come from [Mr. Mak Workspace](https://github.com/witnesstodark/mr-mak-workspace)
+(commit `de0f88b`), with a Workstream frontmatter added; some are adapted to Workstream (see their `source` field). MIT License — Copyright (c) 2026
 Mr. Mak Workspace contributors; full text in [`LICENSE-mr-mak`](LICENSE-mr-mak).
