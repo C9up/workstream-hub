@@ -2,8 +2,8 @@
 # Installs this skill's git hooks into the current repository. .githooks/<hook> becomes a dispatcher that runs
 # every script of .githooks/<hook>.d/, so several skills can each add theirs; this skill's scripts go there.
 set -e
-name=no-ai-signatures
-hooks="commit-msg"
+name=code-in-english
+hooks="commit-msg pre-commit"
 root=$(git rev-parse --show-toplevel)
 here=$(cd "$(dirname "$0")" && pwd)
 current=$(git -C "$root" config --get core.hooksPath || true)

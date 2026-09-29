@@ -5,12 +5,14 @@
   "entries": [
     {
       "kind": "skill",
-      "name": "no-ai-signatures",
-      "path": "skills/no-ai-signatures",
-      "description": "Keep commits free of AI agent signatures (Co-Authored-By Claude/Anthropic, \"Generated with Claude Code\"). Use when committing, opening a pull request, or setting up a repository whose owner does not want agent attribution.",
+      "name": "code-in-english",
+      "path": "skills/code-in-english",
+      "description": "Everything that lives in the codebase is written in English (code, identifiers, comments, tests, commit messages, branch names, pull requests), while the conversation with the user and Workstream documents stay in the user's language. Use when writing or changing code, tests or comments, committing, naming a branch, or opening a pull request.",
       "scripts": [
         "scripts/commit-msg",
-        "scripts/install.sh"
+        "scripts/install.sh",
+        "scripts/pre-commit",
+        "scripts/run-hooks"
       ],
       "agents": [
         "claude",
@@ -18,7 +20,25 @@
         "opencode",
         "gemini"
       ],
-      "sha256": "27c21adca4817ba3e4b68dd73a8a513eec88df7e22d0b70ddb5a0e890818a5c1"
+      "sha256": "c5f49e64372d7d74c80f19cd750a78616b6462d91c5473077bab2578c09b13f2"
+    },
+    {
+      "kind": "skill",
+      "name": "no-ai-signatures",
+      "path": "skills/no-ai-signatures",
+      "description": "Keep commits free of AI agent signatures (Co-Authored-By Claude/Anthropic, \"Generated with Claude Code\"). Use when committing, opening a pull request, or setting up a repository whose owner does not want agent attribution.",
+      "scripts": [
+        "scripts/commit-msg",
+        "scripts/install.sh",
+        "scripts/run-hooks"
+      ],
+      "agents": [
+        "claude",
+        "codex",
+        "opencode",
+        "gemini"
+      ],
+      "sha256": "92ca340de9e6e4e0f557445343ad59ee29eda358763efed50d92aa9aa755c3cf"
     },
     {
       "kind": "context",

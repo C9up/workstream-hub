@@ -1,0 +1,55 @@
+#!/bin/sh
+# Rejects a commit whose branch name or added code comments do not read as English (code-in-english skill).
+# Workstream documents (.workstream/) and prose files (.md, .mdx, .txt, .rst) are not checked. Heuristic: an
+# accented Latin letter, or two common words of French, German or Spanish; text between backticks or double
+# quotes is ignored. False positive: git commit --no-verify.
+
+# Prints the lines of stdin that do not read as English.
+foreign() {
+  LC_ALL=C awk '
+    BEGIN {
+      n = split("le la les un une des du et est sont pour avec dans sur pas qui que ne ces cette aux ajoute ajout corrige correction fichier fichiers und nicht ist das der wird auf eine los las una para por del esta pero", w, " ")
+      for (i = 1; i <= n; i++) stop[w[i]] = 1
+    }
+    {
+      line = $0
+      gsub(/`[^`]*`/, "", line)
+      gsub(/"[^"]*"/, "", line)
+      if (line ~ /\303|\305\223|\305\222/) { print $0; next }
+      t = tolower(line)
+      gsub(/[^a-z]+/, " ", t)
+      split("", seen)
+      hits = 0
+      m = split(t, words, " ")
+      for (j = 1; j <= m; j++) if ((words[j] in stop) && !(words[j] in seen)) { seen[words[j]] = 1; hits++ }
+      if (hits >= 2) print $0
+    }'
+}
+
+status=0
+branch=$(git symbolic-ref --quiet --short HEAD || true)
+if [ -n "$branch" ] && [ -n "$(printf '%s\n' "$branch" | tr '/_.-' '    ' | foreign)" ]; then
+  echo "Branch name must be in English (code-in-english): $branch" >&2
+  status=1
+fi
+
+# Comments on added lines: text after //, /*, <!--, a leading *, "# " or "-- ".
+comments=$(git diff --cached -U0 --no-color --diff-filter=AM -- . \
+  ':(exclude).workstream' ':(exclude)*.md' ':(exclude)*.mdx' ':(exclude)*.txt' ':(exclude)*.rst' |
+  LC_ALL=C awk '
+    /^\+\+\+ / { file = substr($0, 7); next }
+    /^\+/ {
+      line = substr($0, 2)
+      # URLs and double-quoted strings hold no comment ("https://…" is not one).
+      gsub(/[A-Za-z][A-Za-z0-9+.-]*:\/\/[^ \t"]*/, "", line)
+      gsub(/"[^"]*"/, "\"\"", line)
+      if (match(line, /\/\/|\/\*|<!--|^[[:space:]]*\*|^[[:space:]]*#[[:space:]]|[[:space:]]#[[:space:]]|^[[:space:]]*--[[:space:]]/))
+        print file ": " substr(line, RSTART)
+    }' | foreign)
+if [ -n "$comments" ]; then
+  echo "Code comments must be in English (code-in-english):" >&2
+  printf '%s\n' "$comments" | sed 's/^/  /' >&2
+  status=1
+fi
+[ "$status" = 0 ] || echo "False positive? git commit --no-verify" >&2
+exit "$status"

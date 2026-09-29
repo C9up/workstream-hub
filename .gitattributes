@@ -2,6 +2,6 @@ index.json.sig linguist-detectable=false
 # Shell scripts and git hooks keep LF endings on Windows (autocrlf would break the shebang).
 *.sh text eol=lf
 .githooks/* text eol=lf
-skills/no-ai-signatures/scripts/commit-msg text eol=lf
+skills/*/scripts/* text eol=lf
 # Compiled plugin modules.
 *.wasm binary

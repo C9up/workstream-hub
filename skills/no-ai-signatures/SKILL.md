@@ -25,10 +25,12 @@ Install it once per repository:
 sh scripts/install.sh
 ```
 
-It copies the hook to `.githooks/commit-msg` (commit that file so the team shares it) and runs
-`git config core.hooksPath .githooks`. Git never enables hooks from a clone by itself: each clone runs the
-`git config` command once. If `core.hooksPath` already points elsewhere, or a different `commit-msg` hook
-exists, the script stops and asks for a manual merge.
+The installer makes `.githooks/commit-msg` a dispatcher that runs every script of `.githooks/commit-msg.d/`
+(so other skills, such as `code-in-english`, can add theirs), copies this hook there, and runs
+`git config core.hooksPath .githooks`. A different hook already in place keeps running, first
+(`.githooks/commit-msg.d/00-previous`); a copy of this hook from an older installer is replaced. Commit
+`.githooks/` so the team shares it; git never enables hooks from a clone by itself, so each clone runs the
+`git config` command once. If `core.hooksPath` points elsewhere, the installer stops.
 
 Linux, macOS and Windows: the hook only needs `sh`, `grep` and `awk`; Git for Windows runs hooks with its
 bundled `sh`, so run the installer from Git Bash. Scripts are stored with LF line endings (`.gitattributes`).

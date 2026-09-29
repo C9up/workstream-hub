@@ -1,0 +1,9 @@
+#!/bin/sh
+# Git hook dispatcher: runs every script of .githooks/<hook>.d/ in name order with the hook's arguments, and
+# stops at the first failure. Several skills can each add their own script without overwriting each other.
+dir="$(dirname "$0")/$(basename "$0").d"
+[ -d "$dir" ] || exit 0
+for script in "$dir"/*; do
+  [ -f "$script" ] || continue
+  sh "$script" "$@" || exit $?
+done
