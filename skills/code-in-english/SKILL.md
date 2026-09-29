@@ -1,5 +1,6 @@
 ---
 name: code-in-english
+category: git
 description: Everything that lives in the codebase is written in English (code, identifiers, comments, tests, commit messages, branch names, pull requests), while the conversation with the user and Workstream documents stay in the user's language. Use when writing or changing code, tests or comments, committing, naming a branch, or opening a pull request.
 agents: [claude, codex, opencode, gemini]
 git-hooks: [commit-msg, pre-commit]

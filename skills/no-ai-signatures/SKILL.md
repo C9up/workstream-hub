@@ -1,5 +1,6 @@
 ---
 name: no-ai-signatures
+category: git
 description: Keep commits free of AI agent signatures (Co-Authored-By Claude/Anthropic, "Generated with Claude Code"). Use when committing, opening a pull request, or setting up a repository whose owner does not want agent attribution.
 agents: [claude, codex, opencode, gemini]
 git-hooks: [commit-msg]

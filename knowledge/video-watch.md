@@ -3,6 +3,7 @@ type: Leçon
 title: "Inspecting video references"
 description: "Use the local extractor for a timestamped visual overview of a video clip"
 tags: [mr-mak]
+category: video
 status: draft
 created: 2026-09-26
 source: "Mr. Mak Workspace (MIT), knowledge/video-watch.md @ de0f88b"

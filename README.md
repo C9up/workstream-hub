@@ -44,6 +44,9 @@ Both in a skill's `SKILL.md` and in a memory document's frontmatter:
 |---|---|
 | `requires: [other-item]` | items of this repository added along with this one |
 | `agents: [claude, codex]` | agents the item works with (`claude`, `codex`, `opencode`, `gemini`); omitted: all |
+| `category: video` | category the catalogue groups and filters by (`git`, `workflow`, `creative`, `video`, `3d`…); omitted: the first tag |
+
+A plugin declares its category in `plugin.toml` (`category = "3d"`).
 
 ## Rules
 

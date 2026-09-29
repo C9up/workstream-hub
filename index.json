@@ -8,6 +8,7 @@
       "name": "code-in-english",
       "path": "skills/code-in-english",
       "description": "Everything that lives in the codebase is written in English (code, identifiers, comments, tests, commit messages, branch names, pull requests), while the conversation with the user and Workstream documents stay in the user's language. Use when writing or changing code, tests or comments, committing, naming a branch, or opening a pull request.",
+      "category": "git",
       "scripts": [
         "scripts/commit-msg",
         "scripts/install.sh",
@@ -20,13 +21,14 @@
         "opencode",
         "gemini"
       ],
-      "sha256": "241dac0434450440408f45616be9ae4c2332d75bc099ac5a3f2dc7aac8237096"
+      "sha256": "b89d465c7ba9ed3b8b1d4777a912169c18ac59a3a9d9a638739e6cfbaaf61300"
     },
     {
       "kind": "skill",
       "name": "no-ai-signatures",
       "path": "skills/no-ai-signatures",
       "description": "Keep commits free of AI agent signatures (Co-Authored-By Claude/Anthropic, \"Generated with Claude Code\"). Use when committing, opening a pull request, or setting up a repository whose owner does not want agent attribution.",
+      "category": "git",
       "scripts": [
         "scripts/commit-msg",
         "scripts/install.sh",
@@ -38,7 +40,7 @@
         "opencode",
         "gemini"
       ],
-      "sha256": "7a3d0a4ed72efa2d3bb84c953846bbd58d215d0bcf399050f30ca8a4473be0e2"
+      "sha256": "bc303db8590a2c3a3195e2ab839be9bf6f11f7e3c245fb11d68bd5af567b7246"
     },
     {
       "kind": "context",
@@ -48,7 +50,8 @@
       "tags": [
         "mr-mak"
       ],
-      "sha256": "5e8ca17c1415514a559701c919479fdfe872541c3fd6d4b431462439273c408a"
+      "category": "workflow",
+      "sha256": "78a5325ed94e019b5285354a4c42c9c36db4ff2380c552c695f0ad5a28364ec6"
     },
     {
       "kind": "process",
@@ -58,7 +61,8 @@
       "tags": [
         "mr-mak"
       ],
-      "sha256": "16e420583d313947c573ac9d53dd1531537fb36afc6abc2f711efe09dcc9446c"
+      "category": "creative",
+      "sha256": "4fba6a968870e94623109501dbdb5f8a42da6225e46ba605359e082bce4f1630"
     },
     {
       "kind": "process",
@@ -68,7 +72,8 @@
       "tags": [
         "mr-mak"
       ],
-      "sha256": "e3ec0d1558e039ffc1bbb0949ad9e9eda6afcf28b5a31d18cad0138192cb3c97"
+      "category": "creative",
+      "sha256": "0af853f9f49227dde7daa846c9aca045f1f347fa832cefa19d2aad7300a7dc70"
     },
     {
       "kind": "knowledge",
@@ -78,7 +83,8 @@
       "tags": [
         "mr-mak"
       ],
-      "sha256": "097c3d3bce0c42127052dcdf2c2bb5722e3a792671c5c9b8ab3f47c9fe5fced9"
+      "category": "video",
+      "sha256": "067c222e4e668f702369e6053c0cb3abcbcf44539b6389ad4e26924edcd9e51e"
     },
     {
       "kind": "plugin",

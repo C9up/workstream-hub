@@ -3,6 +3,7 @@ type: Processus
 title: "Creative production loop"
 description: "Brief and references, the right model, job receipts, review at full size, smallest useful revision"
 tags: [mr-mak]
+category: creative
 status: draft
 created: 2026-09-26
 source: "Mr. Mak Workspace (MIT), processes/creative-production.md @ de0f88b"

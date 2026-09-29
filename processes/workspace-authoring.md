@@ -3,6 +3,7 @@ type: Processus
 title: "Authoring a Workspace card"
 description: "Reuse or create a Workspace card, write the report with the shared styling, then test it at wide and narrow widths"
 tags: [mr-mak]
+category: creative
 status: draft
 created: 2026-09-26
 source: "Mr. Mak Workspace (MIT), processes/workspace-authoring.md @ de0f88b"
