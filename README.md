@@ -1,9 +1,8 @@
 # Workstream repository
 
-Skills, context, processes, knowledge and plugins shared across projects. Workstream adds skills and memory
-documents to its local library (`~/.local/share/workstream/library/`); each project then copies what it uses
-(origin and fingerprint recorded in `.workstream/skills.toml` and `.workstream/memory.toml`). Plugins install
-straight into a project, from the Plugins page of Workstream.
+Skills, context, processes, knowledge and plugins shared across projects. Workstream adds them to its local
+library (`~/.local/share/workstream/library/`); each project then copies what it uses (origin and fingerprint
+recorded in `.workstream/skills.toml` and `.workstream/memory.toml`; plugins from the project's Plugins panel).
 
 ## Layout
 
