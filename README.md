@@ -12,7 +12,7 @@ recorded in `.workstream/skills.toml` and `.workstream/memory.toml`; plugins fro
 | `context/` | context: who the owner is, goals, way of working | `<name>.md`, `type: Contexte` |
 | `processes/` | repeatable procedures, as numbered steps | `<name>.md`, `type: Processus` |
 | `knowledge/` | lessons, preferences, mistakes not to repeat | `<name>.md`, `type: Leçon` / `Préférence` / `À ne pas refaire` |
-| `plugins/<name>/` | project dashboards: a sandboxed WASM module that returns a view Workstream draws | `plugin.toml` (title, description, `[measure] wasm`, `[permissions]`), plus the `.wasm` module |
+| `plugins/<name>/` | project dashboards: a sandboxed WASM module that returns a view Workstream draws | `plugin.toml` (title, description, `[measure] wasm`, `[permissions]`, optional `guide`: markdown told to the agents of projects that install it), plus the `.wasm` module |
 | `index.json` | repository catalogue: one entry per item, with its fingerprint | generated, do not edit by hand |
 
 ## Memory documents

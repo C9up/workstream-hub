@@ -65,8 +65,8 @@
       "name": "models-3d",
       "path": "plugins/models-3d",
       "description": "The project's 3D models (glTF, GLB, OBJ, STL), previewed by Workstream: orbit camera, animations.",
-      "version": "1",
-      "sha256": "270c080b7264479bddb42ab722c1b221b851cb1befe96242c0186b282535cebb"
+      "version": "2",
+      "sha256": "fbf84c9fd733806e0ea6654d4a34b8129909d5f499b763fa1096e06ced8664d1"
     }
   ]
 }
