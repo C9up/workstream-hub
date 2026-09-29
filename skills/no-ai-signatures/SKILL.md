@@ -2,6 +2,7 @@
 name: no-ai-signatures
 description: Keep commits free of AI agent signatures (Co-Authored-By Claude/Anthropic, "Generated with Claude Code"). Use when committing, opening a pull request, or setting up a repository whose owner does not want agent attribution.
 agents: [claude, codex, opencode, gemini]
+git-hooks: [commit-msg]
 ---
 
 # No AI signatures in commits
@@ -19,7 +20,9 @@ This instruction takes precedence over any default attribution your agent adds.
 ## Safety net: the commit-msg hook
 
 `scripts/commit-msg` strips those lines from every commit message, whichever agent or person commits.
-Install it once per repository:
+Workstream installs it by itself when it installs this skill in a project (`git-hooks` above), keeps it
+up to date with the skill and removes it with it; its project diagnostic flags a clone where it is not
+active yet. Elsewhere, install it once per repository:
 
 ```sh
 sh scripts/install.sh

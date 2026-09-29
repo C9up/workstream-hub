@@ -20,7 +20,7 @@
         "opencode",
         "gemini"
       ],
-      "sha256": "c5f49e64372d7d74c80f19cd750a78616b6462d91c5473077bab2578c09b13f2"
+      "sha256": "241dac0434450440408f45616be9ae4c2332d75bc099ac5a3f2dc7aac8237096"
     },
     {
       "kind": "skill",
@@ -38,7 +38,7 @@
         "opencode",
         "gemini"
       ],
-      "sha256": "92ca340de9e6e4e0f557445343ad59ee29eda358763efed50d92aa9aa755c3cf"
+      "sha256": "7a3d0a4ed72efa2d3bb84c953846bbd58d215d0bcf399050f30ca8a4473be0e2"
     },
     {
       "kind": "context",

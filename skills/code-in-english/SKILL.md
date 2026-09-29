@@ -2,6 +2,7 @@
 name: code-in-english
 description: Everything that lives in the codebase is written in English (code, identifiers, comments, tests, commit messages, branch names, pull requests), while the conversation with the user and Workstream documents stay in the user's language. Use when writing or changing code, tests or comments, committing, naming a branch, or opening a pull request.
 agents: [claude, codex, opencode, gemini]
+git-hooks: [commit-msg, pre-commit]
 ---
 
 # Code in English, conversation in the user's language
@@ -34,7 +35,9 @@ another language, write the new ones in English and leave the others unless aske
 ## Safety net: the git hooks
 
 `scripts/commit-msg` rejects a commit message that does not read as English; `scripts/pre-commit` rejects a
-branch name, or a comment on an added line, that does not. Install them once per repository:
+branch name, or a comment on an added line, that does not. Workstream installs them by itself when it installs
+this skill in a project (`git-hooks` above), keeps them up to date with the skill and removes them with it; its
+project diagnostic flags a clone where they are not active yet. Elsewhere, install them once per repository:
 
 ```sh
 sh scripts/install.sh
