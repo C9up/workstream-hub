@@ -1,8 +1,9 @@
 # Workstream repository
 
-Skills, context, processes and knowledge shared across projects. Workstream adds them to its local
-library (`~/.local/share/workstream/library/`); each project then copies what it uses (origin and
-fingerprint recorded in `.workstream/skills.toml` and `.workstream/memory.toml`).
+Skills, context, processes, knowledge and plugins shared across projects. Workstream adds skills and memory
+documents to its local library (`~/.local/share/workstream/library/`); each project then copies what it uses
+(origin and fingerprint recorded in `.workstream/skills.toml` and `.workstream/memory.toml`). Plugins install
+straight into a project, from the Plugins page of Workstream.
 
 ## Layout
 
@@ -12,6 +13,7 @@ fingerprint recorded in `.workstream/skills.toml` and `.workstream/memory.toml`)
 | `context/` | context: who the owner is, goals, way of working | `<name>.md`, `type: Contexte` |
 | `processes/` | repeatable procedures, as numbered steps | `<name>.md`, `type: Processus` |
 | `knowledge/` | lessons, preferences, mistakes not to repeat | `<name>.md`, `type: Leçon` / `Préférence` / `À ne pas refaire` |
+| `plugins/<name>/` | project dashboards: a sandboxed WASM module that returns a view Workstream draws | `plugin.toml` (title, description, `[measure] wasm`, `[permissions]`), plus the `.wasm` module |
 | `index.json` | repository catalogue: one entry per item, with its fingerprint | generated, do not edit by hand |
 
 ## Memory documents

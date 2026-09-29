@@ -3,3 +3,5 @@ index.json.sig linguist-detectable=false
 *.sh text eol=lf
 .githooks/* text eol=lf
 skills/no-ai-signatures/scripts/commit-msg text eol=lf
+# Compiled plugin modules.
+*.wasm binary

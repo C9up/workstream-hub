@@ -1,0 +1,12 @@
+# 3D models: generic Workstream plugin, published in the official repository by `cargo xtask plugins`.
+title = "3D models"
+description = "The project's 3D models (glTF, GLB, OBJ, STL), previewed by Workstream: orbit camera, animations."
+version = "1"
+
+[measure]
+wasm = "models-3d.wasm"
+timeout = 300
+
+[permissions]
+# The whole project, read-only: models can be anywhere.
+read = ["."]

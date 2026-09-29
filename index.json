@@ -59,6 +59,14 @@
         "mr-mak"
       ],
       "sha256": "097c3d3bce0c42127052dcdf2c2bb5722e3a792671c5c9b8ab3f47c9fe5fced9"
+    },
+    {
+      "kind": "plugin",
+      "name": "models-3d",
+      "path": "plugins/models-3d",
+      "description": "The project's 3D models (glTF, GLB, OBJ, STL), previewed by Workstream: orbit camera, animations.",
+      "version": "1",
+      "sha256": "270c080b7264479bddb42ab722c1b221b851cb1befe96242c0186b282535cebb"
     }
   ]
 }
